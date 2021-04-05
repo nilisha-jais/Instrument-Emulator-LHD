@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Nilisha's soundboard</title>
+  </head>
+
+  <body>
+
+    <style>
+      button {
+        width: 500px;
+        height: 200px;
+        border-radius: 10px;
+        background-color:black;
+        border: 0px;
+        margin:10px 10px;
+        color: blanchedalmond;
+        font-size: 30px;
+        border: none;
+        outline: none;
+      }
+      button:hover{
+        background-color: white;
+        color: black;
+      }
+      .soundboard {
+        display: flex;
+        flex-direction: column;
+      }
+      
+    </style>
+    
+    <audio id="bass-drum">
+      <source src="./sounds/bass-drum.wav" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+    <audio id="bugle-first-call">
+      <source src="./sounds/bugle-first-call.wav" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+    <audio id="chinese-gong">
+      <source src="./sounds/chinese-gong" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+    <audio id="congas">
+      <source src="./sounds/congas.wav" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+    <audio id="drumroll">
+      <source src="./sounds/drumroll.wav" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+    <audio id="female-opera">
+      <source src="./sounds/female-opera.wav" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+    <audio id="harp">
+      <source src="./sounds/harp.wav" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+    <audio id="military-drum">
+      <source src="./sounds/military-drum.wav" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+    <audio id="tap-dancing">
+      <source src="./sounds/tap-dancing.wav" type="audio/wav">
+      Hi, your browser does not support audio files.
+    </audio>
+
+    <center><h1>Nilisha's SOUNDBOARD</h1></center>
+
+    <div class="soundboard">
+      <div class="row">
+          <button onclick="toggleAudio('harp', 0)">
+            Harp
+          </button>
+          <button onclick="toggleAudio('bass-drum', 0)">
+           Bass Drum
+          </button>
+          <button onclick="toggleAudio('bugle-first-call', 0)">
+           Bugle
+          </button>
+      </div>
+
+      <div class="row">
+        <button onclick="toggleAudio('chinese-gong', 0)">
+         Chinese Gong
+        </button>
+        <button onclick="toggleAudio('congas', 0)">
+         Congas
+        </button>
+        <button onclick="toggleAudio('drumroll', 0)">
+         Drumroll
+        </button>
+      </div>
+
+      <div class="row">
+        <button onclick="toggleAudio('female-opera', 0)">
+          Female Opera
+        </button>
+        <button onclick="toggleAudio('military-drum', 0)">
+         Military Drum
+        </button>
+        <button onclick="toggleAudio('tap-dancing', 0)">
+         Tap Dancing
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function toggleAudio(sound, number) {
+        var audio = document.getElementById(sound);
+        audio.play();
+        console.log("Audio toggled")
+      }
+    </script>
+
+  </body>
+</html>
